@@ -1,6 +1,6 @@
 <template>
   <Hero />
-  <Posts v-bind:posts="posts"/>
+  <Posts v-bind:posts="posts" />
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
     }
   },
   created() {
-    axios.get('http://jsonplaceholder.typicode.com/posts?_limit=15')
+    axios.get('https://jsonplaceholder.typicode.com/posts?_limit=15')
     .then(res => this.posts = res.data)
 
     .catch(err => console.log(err))
